@@ -41,6 +41,22 @@ Raspberry Pi soil moisture monitoring system
 3. Scheduling:
    - 07:00, 10:00, 14:04, 16:00 daily
    - Async event loop
+## Sensor.py Functional Breakdown
+```python
+# Key Components:
+1. GPIO Configuration:
+   - BCM GPIO4 (Physical Pin7)
+   - Pull-up resistor enabled
+   - 200ms bounce time filtering
+
+2. Email Engine:
+   - QQ SMTP (smtp.qq.com:587)
+   - STARTTLS encryption
+   - Timestamped alerts
+
+3. Scheduling:
+   - 07:00, 10:00, 14:04, 16:00 daily
+   - Async event loop
 
 ## Quick Start
 ```bash
